@@ -786,8 +786,6 @@ svg.leaflet-image-layer.leaflet-interactive path {
   [data-theme="light"] .theme-btn .ic-sun{display:none;}
   [data-theme="light"] .theme-btn .ic-moon{display:block;}
   .leaflet-container{background:var(--mapbg);}
-  .leaflet-tile{filter:brightness(1.7) contrast(1.06);}
-  [data-theme="light"] .leaflet-tile{filter:none;}
   .leaflet-bar{border-color:var(--line);}
   .leaflet-bar a,.leaflet-bar a:link{background:var(--lbar);color:var(--ink);border-bottom-color:var(--line);}
   .leaflet-bar a:hover{background:var(--lbarhover);}
@@ -1116,7 +1114,7 @@ svg.leaflet-image-layer.leaflet-interactive path {
 
   function tileUrl(){ return document.documentElement.getAttribute('data-theme')==='light'
     ? 'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
-    : 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png'; }
+    : 'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png'; }
 
   function initMap(){
     map = L.map('map',{zoomControl:true, attributionControl:true, scrollWheelZoom:false});
