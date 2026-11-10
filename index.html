@@ -91,7 +91,7 @@ function dir(origin, dest, waypoints, avoidTolls){
 
 /* ---------- INFO TAB ---------- */
 const INFO_HTML = `
-  <span class="tag">Before you go</span>
+  <span class="tag">Before the trip</span>
   <h2>Essentials</h2>
   <div class="date">Final plan: car back Wed 11 before 9:00am. Tue is London Arch, the MCG shops and ramen. No Phillip Island.</div>
 
@@ -107,24 +107,24 @@ const INFO_HTML = `
   <h3>The car: back at Hertz, Franklin St, Wed 11 before 9:00am</h3>
   <ul class="list">
     <li><b>Hertz Franklin St opens 7:30am on weekdays and closes 5:00pm.</b> <span>Phone 03 9659 8890. There is no confirmed after-hours drop-off, so don't plan one.</span></li>
-    <li><b>Fill the tank tonight before you park.</b> <span>Take photos of the car and the fuel gauge when you hand it back.</span></li>
-    <li><b>Carry your licence + International Driving Permit.</b></li>
+    <li><b>Fill the tank tonight before parking.</b> <span>Take photos of the car and the fuel gauge at hand-back.</span></li>
+    <li><b>Carry licence + International Driving Permit.</b></li>
     <li><b>Keep left. No left turn on red.</b> <span>Hook turns apply in the CBD only. Trams may only be overtaken on the left.</span></li>
-    <li><b>Tolls:</b> <span>West Gate Bridge and Freeway are free. The West Gate Tunnel, CityLink and EastLink are tolled. Maps set to avoid tolls works for these routes. Ask Hertz about their e-Pass, or get a Linkt Visitor's Pass, for any you hit by accident.</span></li>
+    <li><b>Tolls:</b> <span>West Gate Bridge and Freeway are free. The West Gate Tunnel, CityLink and EastLink are tolled. Maps set to avoid tolls works for these routes. Ask Hertz about their e-Pass, or get a Linkt Visitor's Pass, for any tolls hit by accident.</span></li>
   </ul>
 
   <h3>Shops at the MCG (Tue)</h3>
   <ul class="list">
     <li><b>The Demon Shop, 120 Barassi Way, Gate E.</b> <span>Mon to Fri 10:00am to 4:00pm. Holiday changes: (03) 9652 1102.</span></li>
     <li><b>MCG Shop, Gate 3, behind Bay M51.</b> <span>Listed as open every day, but I found no hours. Go to the Demon Shop first.</span></li>
-    <li><b>Parking at the MCG on a weekday is unconfirmed.</b> <span>Check Google Maps or Parkopedia as you arrive. Don't get stuck hunting for a space close to 4:00pm.</span></li>
+    <li><b>Parking at the MCG on a weekday is unconfirmed.</b> <span>Check Google Maps or Parkopedia on arrival. Don't get stuck hunting for a space close to 4:00pm.</span></li>
   </ul>
 
   <h3>Road works to expect</h3>
   <ul class="list">
     <li><b>Cobden-Port Campbell Rd, about 8 km south of Cobden.</b> <span>One lane with lights, delays up to 5 minutes.</span></li>
     <li><b>Near the Twelve Apostles and Loch Ard Gorge.</b> <span>Safety barrier works, with lane stops during work hours.</span></li>
-    <li><b>Check VicTraffic before you leave.</b></li>
+    <li><b>Check VicTraffic before leaving.</b></li>
   </ul>
 
   <h3>Timing and weather</h3>
@@ -140,7 +140,7 @@ const DAYS = [
   id:"d1", nav:"Day 1", sub:"Fri", tag:"Trams", title:"Arrival & first penguins", date:"Friday 6 November · land 7:20am",
   sections:[
    {label:"Morning", items:[
-     {time:"9:30am", name:"Land & get to the city", note:"SkyBus or taxi to the CBD (about 45 min). Drop your bags."},
+     {time:"9:30am", name:"Land & get to the city", note:"SkyBus or taxi to the CBD (about 45 min). Drop bags at the hotel."},
      {time:"10:30am", name:"Patricia Coffee Brewers", badge:["star","4.8"], note:"Best flat white in town. Weekdays only.", q:"Patricia Coffee Brewers Melbourne"},
      {time:"11:30am", name:"Madame Yen", badge:["star","4.9"], note:"Cheap, authentic Vietnamese brunch in the CBD.", q:"Madame Yen Bourke St Melbourne"}]},
    {label:"Afternoon", items:[
@@ -150,7 +150,7 @@ const DAYS = [
      {time:"6:30pm", name:"Saigon Street Eats", badge:["star","4.6"], note:"Cheap, benchmark pho near the beach. Alt: Cicciolina, iconic St Kilda Italian.", q:"Saigon Street Eats St Kilda"},
      {time:"8:15pm", name:"St Kilda penguins", badge:["free","Free"], note:"Little penguins come ashore in the breakwater rocks at dusk.", q:"St Kilda Breakwater penguins"}]}
   ],
-  callout:"<b>Go easy today.</b> You've just flown 20+ hours. St Kilda is a gentle first night."
+  callout:"<b>Go easy today.</b> Just flew 20+ hours. St Kilda is a gentle first night."
  },
  {
   id:"d2", nav:"Day 2", sub:"Sat", tag:"Trams", title:"Melbourne - market & coffee", date:"Saturday 7 November · flexible city day",
@@ -161,11 +161,11 @@ const DAYS = [
      {time:"11:00am", name:"Proud Mary + Industry Beans", badge:["star","4.5"], note:"Collingwood and Fitzroy roastery crawl.", q:"Proud Mary Coffee Collingwood"}]},
    {label:"Afternoon", items:[
      {time:"1:00pm", name:"Jo's Banh Mi & Brew", badge:["star","4.9"], note:"Outstanding-value banh mi and pho, Carlton.", q:"Jo's Banh Mi Brew Carlton"},
-     {time:"2:30pm", name:"NGV & last laneways", note:"The gallery, arcades, and any street art you missed."}]},
+     {time:"2:30pm", name:"NGV & last laneways", note:"The gallery, arcades, and any street art missed."}]},
    {label:"Evening", items:[
      {time:"7:00pm", name:"Hakata Gensuke", badge:["star","4.4"], note:"Rich tonkotsu ramen, open late. Early night: the car is tomorrow.", q:"Hakata Gensuke Russell St Melbourne"}]}
   ],
-  callout:"<b>Swap in anything you already did.</b> Pick up the car early Sunday, so keep the night light."
+  callout:"<b>Swap in anything already done.</b> Car pick-up is early Sunday, so keep the night light."
  },
  {
   id:"d3", nav:"Day 3", sub:"Sun", tag:"Car · overnight", title:"Great Ocean Road: day 1", date:"Sunday 8 November · sleep in Apollo Bay",
@@ -175,7 +175,7 @@ const DAYS = [
      {time:"8:30am", name:"Pick up the car & leave the city", note:"West Gate Bridge (free), then the Princes Fwy toward Geelong and Torquay. Skip the tolled West Gate Tunnel. Fuel up at Torquay or Anglesea."},
      {time:"10:15am", name:"Anglesea kangaroo tour", badge:["paid","Ticketed"], note:"25-minute tour of the golf course, walk-ins from the clubhouse bar. No guarantees. Backups are on the Info tab.", q:"Anglesea Golf Club kangaroo tours"},
      {time:"11:30am", name:"Swingbridge Cafe, Lorne", badge:["star","4.4"], note:"Beachside brunch, great coffee.", q:"Swingbridge Cafe Lorne"},
-     {time:"12:30pm", name:"Erskine Falls", badge:["opt","Optional"], note:"Short walk to a tall waterfall. Skip it if you are behind (about 45 min).", q:"Erskine Falls Lorne"}]},
+     {time:"12:30pm", name:"Erskine Falls", badge:["opt","Optional"], note:"Short walk to a tall waterfall. Skip it if behind schedule (about 45 min).", q:"Erskine Falls Lorne"}]},
    {label:"Afternoon", items:[
      {time:"1:15pm", name:"Kennett River koalas", badge:["free","Free"], note:"Walk up Grey River Rd. One of the best wild-koala spots. Expect temporary lights near here.", q:"Kennett River Koala Walk"},
      {time:"2:15pm", name:"Lunch with a view", note:"Splurge: Chris's Beacon Point, seafood on the hill above Skenes Creek (check lunch hours). Alt: La Bimba, upstairs Italian with ocean views, or fish and chips at the Apollo Bay Fishermen's Co-op.", q:"Chris's Beacon Point Skenes Creek"},
@@ -196,7 +196,7 @@ const DAYS = [
      {time:"9:30am", name:"Maits Rest Rainforest Walk", badge:["free","Free"], note:"Easy boardwalk through fern gullies and giant myrtle beech, about 15 minutes west of Apollo Bay. 20 minutes is enough.", q:"Maits Rest Rainforest Walk"},
      {time:"10:30am", name:"Triplet Falls", badge:["free","Free"], note:"1.8 km rainforest loop near Beech Forest. Allow about 1 hour. Alt: Hopetoun Falls, shorter with a viewing platform.", q:"Triplet Falls Great Otway National Park"}]},
    {label:"Afternoon", items:[
-     {time:"11:45am", name:"Drive to Princetown via Lavers Hill", note:"About 45 minutes. Lavers Hill has limited food, so eat your packed lunch at Gibson Steps."},
+     {time:"11:45am", name:"Drive to Princetown via Lavers Hill", note:"About 45 minutes. Lavers Hill has limited food, so eat the packed lunch at Gibson Steps."},
      {time:"12:45pm", name:"Gibson Steps", badge:["star","Must do"], note:"About 86 steps down to the beach and the base of the sea stacks. Reopened in February 2026. Best at low tide, and skip the beach if the sea is rough. Allow 40 minutes.", q:"Gibson Steps Great Ocean Road"},
      {time:"1:45pm", name:"Loch Ard Gorge", badge:["star","Must do"], note:"Beach, cliffs and the shipwreck story. Walk down to the beach and up to Thunder Cave if open. Reopened late October after works, so check Parks Victoria. Allow 60 minutes.", q:"Loch Ard Gorge Port Campbell"},
      {time:"3:15pm", name:"Check in: guesthouse", note:"2619 Cobden-Port Campbell Rd, about 10 minutes inland from Port Campbell. Rest, shower, layer up.", q:"2619 Cobden-Port Campbell Rd Port Campbell VIC 3269"},
@@ -226,13 +226,13 @@ const DAYS = [
      {time:"5:30pm", name:"Hotel gym", note:"24 hours. Rest before dinner."},
      {time:"7:00pm", name:"Hakata Gensuke, Russell St", badge:["star","Tonkotsu"], note:"168 Russell St. Broadsheet's pick as the gold standard for tonkotsu in Melbourne. Open to 10:00pm on Tuesday. Gyoza not confirmed on their site, ask. Alt: Ippudo, Mr Ramen San, Shujinko.", q:"Hakata Gensuke 168 Russell St Melbourne"}]}
   ],
-  callout:"<b>The Demon Shop closes at 4:00pm sharp.</b> If you're running late, drop London Arch first. <a class='dirbtn' target='_blank' rel='noopener' href='" + dir("Melbourne Cricket Ground Gate E", "380 La Trobe St Car Park Melbourne", [], true) + "'>MCG to the car park &rsaquo;</a>"
+  callout:"<b>The Demon Shop closes at 4:00pm sharp.</b> If running late, drop London Arch first. <a class='dirbtn' target='_blank' rel='noopener' href='" + dir("Melbourne Cricket Ground Gate E", "380 La Trobe St Car Park Melbourne", [], true) + "'>MCG to the car park &rsaquo;</a>"
  },
  {
   id:"d6", nav:"Day 6", sub:"Wed", tag:"Car back 9am", title:"Return the car & fly home", date:"Wednesday 11 November · Hertz opens 7:30am",
   sections:[
    {label:"Morning", items:[
-     {time:"7:20am", name:"Collect the car", note:"380 La Trobe St car park opens at 6:00am on weekdays. Check the exit terms for your ticket.", q:"380 La Trobe St Car Park Melbourne"},
+     {time:"7:20am", name:"Collect the car", note:"380 La Trobe St car park opens at 6:00am on weekdays. Check the exit terms on the parking ticket.", q:"380 La Trobe St Car Park Melbourne"},
      {time:"7:45am", name:"Return at Hertz, Franklin St", badge:["star","By 9:00am"], note:"Opens 7:30am. Photograph the car and the fuel gauge. Mind the hook turns in the CBD.", q:"Hertz Franklin St Melbourne"},
      {time:"8:45am", name:"Patricia Coffee Brewers", badge:["star","4.8"], note:"A final proper flat white. Weekdays only.", q:"Patricia Coffee Brewers Melbourne"},
      {time:"9:30am", name:"Final stroll / gifts", note:"A last wander. If the MCG Shop was closed on Tuesday, a quick visit is possible but leaves little buffer."},
